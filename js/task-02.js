@@ -17,3 +17,13 @@ const ingredientRef = ingredients
     ulRef.appendChild(liElem);
   })
   .join("");
+
+// ulRef.insertAdjacentHTML("afterbegin", ingredientRef);
+
+// for (const ingredient of ingredients) {
+//   const liElem = document.createElement("li");
+//   liElem.textContent = ingredient;
+//   console.log(liElem);
+//   liElem.classList.add("item");
+//   ulRef.appendChild(liElem);
+// }
