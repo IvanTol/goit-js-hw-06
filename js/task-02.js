@@ -9,21 +9,13 @@ const ingredients = [
 
 const ulRef = document.querySelector("#ingredients");
 
-const ingredientRef = ingredients
-  .map((ingredient) => {
-    const liElem = document.createElement("li");
-    liElem.textContent = ingredient;
-    liElem.classList.add("item");
-    ulRef.appendChild(liElem);
-  })
-  .join("");
+const ingredientRef = ingredients.map((ingredient) => {
+  const liElem = document.createElement("li");
+  liElem.textContent = ingredient;
+  liElem.classList.add("item");
+  return liElem;
+});
 
-// ulRef.insertAdjacentHTML("afterbegin", ingredientRef);
+console.log(ingredientRef);
 
-// for (const ingredient of ingredients) {
-//   const liElem = document.createElement("li");
-//   liElem.textContent = ingredient;
-//   console.log(liElem);
-//   liElem.classList.add("item");
-//   ulRef.appendChild(liElem);
-// }
+ulRef.append(...ingredientRef);
